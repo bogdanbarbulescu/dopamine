@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Dopamine Reset Tool</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container mt-4 mb-5">
+        <!-- Header -->
+        <div class="text-center mb-4">
+            <h1 class="cheat-sheet-title">Dopamine Reset Tool</h1>
+            <p class="lead intro-text">An interactive guide to understanding and managing your dopamine levels for better focus, motivation, and well-being. This isn't about eliminating dopamine, but balancing it.</p>
+        </div>
+
+        <!-- Trigger Filter -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group trigger-tool">
+                    <label class="input-group-text" for="triggerSelect"><i class="fas fa-filter me-2"></i>Filter by Trigger:</label>
+                    <select class="form-select" id="triggerSelect">
+                        <option selected value="all">Show All Strategies</option>
+                        <option value="social">Social Media / Scrolling</option>
+                        <option value="food">Sugar / Junk Food</option>
+                        <option value="shopping">Shopping / Consumption</option>
+                        <option value="gaming">Gaming / Gambling</option>
+                        <option value="procrastination">Procrastination / Low Motivation</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress-container mb-4">
+            <p class="text-center mb-1">Strategies you're actively trying:</p>
+            <div class="progress" role="progressbar" aria-label="Progress implementing strategies" aria-valuenow="0" aria-valuemin="0" aria-valuemax="6">
+                <div class="progress-bar bg-success" id="progressBar" style="width: 0%">0 / 6</div>
+            </div>
+        </div>
+
+        <!-- Strategies Accordion -->
+        <div class="accordion" id="dopamineStrategiesAccordion">
+
+            <!-- Strategy 1: Pain Before Pleasure -->
+            <div class="accordion-item strategy-item" data-strategy-id="strategy-1" data-triggers='["procrastination"]'>
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 1 as active">
+                        1. <span class="highlight highlight-pain">Pain Before Pleasure</span>
+                        <i class="fas fa-bolt ms-auto me-2 strategy-icon"></i>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#dopamineStrategiesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Concept:</strong> Do something uncomfortable (exercise, cold shower, hard work) before indulging in pleasurable activities.</p>
+                        <div class="learn-more-content">
+                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Your brain seeks balance (homeostasis). Experiencing effort/discomfort first makes the subsequent reward feel more potent and earned, strengthening the connection between work and reward.</p>
+                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Finish your workout before TV, complete a hard task before social media, cold shower before coffee.</p>
+                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Don't make the "pain" excessively draining or unsustainable. It's about effort, not punishment.</p>
+                            <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Research "contrast principle" in psychology.</p>
+                            <div class="user-notes mt-3">
+                                <h6>My Notes:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="How can I apply this today?"></textarea>
+                            </div>
+                            <div class="quiz mt-3">
+                                <h6>Quick Check:</h6>
+                                <p>True/False: This strategy aims to eliminate pleasure.</p>
+                                <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
+                                <p class="quiz-answer d-none mt-1"><strong>False.</strong> It aims to enhance the *value* of pleasure by preceding it with effort, strengthening reward pathways.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 2: Dopamine Fast -->
+            <div class="accordion-item strategy-item" data-strategy-id="strategy-2" data-triggers='["social", "food", "shopping", "gaming"]'>
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                         <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 2 as active">
+                        2. <span class="highlight highlight-fast">Try a Dopamine Fast</span>
+                        <i class="fas fa-stopwatch ms-auto me-2 strategy-icon"></i>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#dopamineStrategiesAccordion">
+                     <div class="accordion-body">
+                        <p><strong>Concept:</strong> Take a planned break (e.g., hours, a day, longer) from specific high-reward stimuli (social media, sugar, shopping, etc.).</p>
+                         <div class="learn-more-content">
+                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Constant high-dopamine hits desensitize receptors. A break allows them to reset, making normal activities feel more rewarding again. It reduces dependency on intense stimuli.</p>
+                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> No social media on Sundays, no sugary snacks for a week, designated "no-buy" periods.</p>
+                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> It's not about total sensory deprivation or eliminating *all* dopamine. Focus on reducing *problematic*, high-intensity behaviors. Start small.</p>
+                             <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Look up Dr. Anna Lembke's work on dopamine and addiction.</p>
+                             <div class="user-notes mt-3">
+                                <h6>My Notes:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="What specific activity could I fast from, and for how long?"></textarea>
+                            </div>
+                            <div class="quiz mt-3">
+                                <h6>Quick Check:</h6>
+                                <p>The goal of a dopamine fast is to:</p>
+                                <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
+                                <p class="quiz-answer d-none mt-1"><strong>Reset sensitivity.</strong> It allows dopamine receptors to recover from overstimulation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 3: Avoid Variable Rewards -->
+            <div class="accordion-item strategy-item" data-strategy-id="strategy-3" data-triggers='["social", "gaming", "shopping"]'>
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 3 as active">
+                        3. <span class="highlight highlight-rewards">Avoid Variable Rewards</span>
+                        <i class="fas fa-random ms-auto me-2 strategy-icon"></i>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#dopamineStrategiesAccordion">
+                    <div class="accordion-body">
+                         <p><strong>Concept:</strong> Steer clear of activities with unpredictable payoffs that hijack your dopamine system (e.g., endless scrolling, notifications, gambling).</p>
+                        <div class="learn-more-content">
+                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Unpredictability is highly engaging for the brain's reward system (think slot machines). It keeps you hooked, seeking the *possibility* of a reward, often leading to compulsive behavior.</p>
+                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Turn off non-essential notifications, set specific times for checking feeds (don't scroll infinitely), avoid games with loot boxes.</p>
+                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Variable rewards are everywhere. Focus on reducing exposure to the most problematic ones for *you*. Complete avoidance might be unrealistic.</p>
+                             <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Read about "intermittent reinforcement" schedules.</p>
+                             <div class="user-notes mt-3">
+                                <h6>My Notes:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="Which variable rewards hook me the most? How can I limit them?"></textarea>
+                            </div>
+                             <div class="quiz mt-3">
+                                <h6>Quick Check:</h6>
+                                <p>Variable rewards are less addictive than predictable rewards. True/False?</p>
+                                <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
+                                <p class="quiz-answer d-none mt-1"><strong>False.</strong> The unpredictability makes them *more* addictive and harder to disengage from.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Strategy 4: Choose Stable Pleasures -->
+            <div class="accordion-item strategy-item" data-strategy-id="strategy-4" data-triggers='["procrastination", "social"]'>
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 4 as active">
+                        4. <span class="highlight highlight-stable">Choose Stable Pleasures</span>
+                        <i class="fas fa-leaf ms-auto me-2 strategy-icon"></i>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#dopamineStrategiesAccordion">
+                     <div class="accordion-body">
+                        <p><strong>Concept:</strong> Focus on activities with predictable, steady rewards and intrinsic value (hobbies, learning, connection) rather than chasing intense highs.</p>
+                       <div class="learn-more-content">
+                           <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> These activities provide sustainable satisfaction and build long-term well-being without the dopamine crashes associated with intense, fleeting pleasures. They often involve effort but yield lasting fulfillment.</p>
+                           <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Engaging in creative hobbies (art, music), learning a skill, deep conversations, reading, spending time in nature, meaningful work.</p>
+                           <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> These might not feel as immediately exciting as high-dopamine activities. Requires patience and valuing the process, not just the outcome.</p>
+                            <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Explore concepts like "flow state" (Mihaly Csikszentmihalyi) and "intrinsic motivation".</p>
+                            <div class="user-notes mt-3">
+                                <h6>My Notes:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="What stable, fulfilling activities could I engage in more?"></textarea>
+                            </div>
+                            <div class="quiz mt-3">
+                                <h6>Quick Check:</h6>
+                                <p>Stable pleasures typically provide:</p>
+                                <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
+                                <p class="quiz-answer d-none mt-1"><strong>Sustainable satisfaction.</strong> They offer steady, long-term rewards rather than intense, short-lived highs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 5: Build Friction -->
+            <div class="accordion-item strategy-item" data-strategy-id="strategy-5" data-triggers='["social", "food", "shopping", "gaming", "procrastination"]'>
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                       <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 5 as active">
+                        5. <span class="highlight highlight-friction">Build Friction into Bad Habits</span>
+                         <i class="fas fa-anchor ms-auto me-2 strategy-icon"></i>
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#dopamineStrategiesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Concept:</strong> Make addictive or unwanted behaviors harder to access or initiate.</p>
+                        <div class="learn-more-content">
+                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Increasing the effort required interrupts automaticity. The pause created by the friction allows your conscious brain to intervene and make a different choice.</p>
+                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Delete distracting apps, keep junk food out of the house, put the phone in another room while working, use website blockers, log out of accounts.</p>
+                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Don't make *essential* tasks harder. Be realistic – if the friction is too high, you might just give up on the strategy altogether.</p>
+                             <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> James Clear's "Atomic Habits" discusses making bad habits difficult.</p>
+                             <div class="user-notes mt-3">
+                                <h6>My Notes:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="How can I add friction to one specific unwanted habit?"></textarea>
+                            </div>
+                            <div class="quiz mt-3">
+                                <h6>Quick Check:</h6>
+                                <p>Adding friction works by making a habit:</p>
+                                <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
+                                <p class="quiz-answer d-none mt-1"><strong>More effortful.</strong> This creates a pause for conscious decision-making.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 6: Daily Micro-Challenges -->
+            <div class="accordion-item strategy-item" data-strategy-id="strategy-6" data-triggers='["procrastination"]'>
+                <h2 class="accordion-header" id="headingSix">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                       <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 6 as active">
+                        6. <span class="highlight highlight-challenges">Create Daily Micro-Challenges</span>
+                        <i class="fas fa-mountain ms-auto me-2 strategy-icon"></i>
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#dopamineStrategiesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Concept:</strong> Intentionally seek small, manageable doses of healthy discomfort or effort throughout the day.</p>
+                         <div class="learn-more-content">
+                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Similar to "Pain Before Pleasure" but integrated daily. Regularly choosing slight effort over ease helps maintain dopamine sensitivity and builds resilience. It reinforces your ability to overcome resistance.</p>
+                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Take the stairs, do a few push-ups during a break, tackle the hardest task first ("eat the frog"), resist checking phone immediately upon waking.</p>
+                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Keep them "micro" – they should be easily achievable daily boosts, not major ordeals that lead to burnout.</p>
+                            <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Look into "hormesis" – the concept of beneficial effects from low doses of stressors.</p>
+                             <div class="user-notes mt-3">
+                                <h6>My Notes:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="What's one small, effortful thing I can do today?"></textarea>
+                            </div>
+                            <div class="quiz mt-3">
+                                <h6>Quick Check:</h6>
+                                <p>Micro-challenges should feel overwhelming. True/False?</p>
+                                <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
+                                <p class="quiz-answer d-none mt-1"><strong>False.</strong> They should be small, manageable doses of effort or discomfort.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End Accordion -->
+
+        <!-- Save Button -->
+        <div class="text-center mt-5">
+             <button class="btn btn-info btn-lg" onclick="window.print()">
+                <i class="fas fa-save me-2"></i>Save Summary (Print/PDF)
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center footer-note mt-4">Use this tool to build awareness and make mindful choices. Progress takes time!</p>
+
+    </div> <!-- End Container -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</body>
+</html>
