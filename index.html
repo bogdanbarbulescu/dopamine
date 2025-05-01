@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Dopamine Reset Tool</title>
+    <title>The Balanced Brain: Dopamine Guide</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for Icons -->
@@ -14,17 +14,27 @@
 <body>
 
     <div class="container mt-4 mb-5">
-        <!-- Header -->
-        <div class="text-center mb-4">
-            <h1 class="cheat-sheet-title">Dopamine Reset Tool</h1>
-            <p class="lead intro-text">An interactive guide to understanding and managing your dopamine levels for better focus, motivation, and well-being. This isn't about eliminating dopamine, but balancing it.</p>
-        </div>
+
+        <!-- Header/Title Area -->
+        <header class="main-header text-center p-4 mb-4 rounded">
+            <h1 class="display-5 fw-bold">The Balanced Brain: Your Guide to Understanding and Managing Dopamine</h1>
+            <p class="lead fs-5">Achieve Better Focus, Motivation, and Well-being Through Conscious Dopamine Management</p>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="introduction mb-5 p-3 bg-light rounded shadow-sm">
+            <h2 class="visually-hidden">Introduction</h2>
+             <p>Welcome! You're holding a guide designed to help you navigate the complex world of <strong>dopamine</strong>, a crucial neurotransmitter often misunderstood as just the "pleasure molecule." It's far more than that – it's the engine of <strong>motivation</strong>, the director of <strong>focus</strong>, and a key player in <strong>learning</strong> and <strong>reward</strong>.</p>
+             <p>In our modern world, we're bombarded with stimuli that can hijack our dopamine system – endless notifications, hyper-palatable foods, constant novelty online. This can lead to a cycle of intense highs followed by deep lows, leaving us feeling unfocused, unmotivated, and perpetually seeking the next hit.</p>
+             <p>This guide isn't about eliminating dopamine or striving for a life devoid of pleasure. Instead, it's about <strong>understanding</strong> how your dopamine system works and learning practical, science-backed strategies to <strong>balance</strong> it. By consciously managing your dopamine levels, you can cultivate sustainable focus, intrinsic motivation, resilience, and a greater sense of overall well-being.</p>
+             <p>Let's explore six key strategies. Each section includes the core concept, the science behind why it works, practical examples, potential pitfalls to avoid, resources for deeper dives, and a quick check to reinforce your understanding.</p>
+        </section>
 
         <!-- Trigger Filter -->
         <div class="row justify-content-center mb-4">
-            <div class="col-md-6">
+            <div class="col-md-8 col-lg-6">
                 <div class="input-group trigger-tool">
-                    <label class="input-group-text" for="triggerSelect"><i class="fas fa-filter me-2"></i>Filter by Trigger:</label>
+                    <label class="input-group-text" for="triggerSelect"><i class="fas fa-filter me-2"></i>Filter by Common Trigger:</label>
                     <select class="form-select" id="triggerSelect">
                         <option selected value="all">Show All Strategies</option>
                         <option value="social">Social Media / Scrolling</option>
@@ -39,9 +49,9 @@
 
         <!-- Progress Tracker -->
         <div class="progress-container mb-4">
-            <p class="text-center mb-1">Strategies you're actively trying:</p>
+            <p class="text-center mb-1 fw-medium">Strategies you're actively trying:</p>
             <div class="progress" role="progressbar" aria-label="Progress implementing strategies" aria-valuenow="0" aria-valuemin="0" aria-valuemax="6">
-                <div class="progress-bar bg-success" id="progressBar" style="width: 0%">0 / 6</div>
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" id="progressBar" style="width: 0%">0 / 6</div>
             </div>
         </div>
 
@@ -53,27 +63,49 @@
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 1 as active">
-                        1. <span class="highlight highlight-pain">Pain Before Pleasure</span>
-                        <i class="fas fa-bolt ms-auto me-2 strategy-icon"></i>
+                        1. <span class="highlight highlight-pain">Pain Before Pleasure</span> (Harnessing Contrast)
+                        <i class="fas fa-bolt ms-auto me-2 strategy-icon" aria-hidden="true"></i>
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#dopamineStrategiesAccordion">
                     <div class="accordion-body">
-                        <p><strong>Concept:</strong> Do something uncomfortable (exercise, cold shower, hard work) before indulging in pleasurable activities.</p>
+                        <p><strong>Concept:</strong> Intentionally engage in an effortful or mildly uncomfortable activity <em>before</em> indulging in a pleasurable one. This leverages the brain's natural balancing mechanisms.</p>
                         <div class="learn-more-content">
-                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Your brain seeks balance (homeostasis). Experiencing effort/discomfort first makes the subsequent reward feel more potent and earned, strengthening the connection between work and reward.</p>
-                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Finish your workout before TV, complete a hard task before social media, cold shower before coffee.</p>
-                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Don't make the "pain" excessively draining or unsustainable. It's about effort, not punishment.</p>
-                            <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Research "contrast principle" in psychology.</p>
-                            <div class="user-notes mt-3">
-                                <h6>My Notes:</h6>
-                                <textarea class="form-control notes-textarea" rows="2" placeholder="How can I apply this today?"></textarea>
-                            </div>
+                            <p><strong><i class="fas fa-brain me-1" aria-hidden="true"></i>Why it works:</strong> Your brain constantly strives for <strong>homeostasis</strong> (a stable internal state). When you exert effort or experience discomfort (a temporary "dip" below your dopamine baseline), the subsequent reward feels subjectively <em>more</em> valuable and satisfying. This process, known as the <strong>contrast principle</strong>, not only enhances the pleasure but also strengthens the neural pathways linking effort to reward, making hard work feel more inherently worthwhile over time. It teaches your brain that satisfaction follows exertion.</p>
+
+                            <p><strong><i class="fas fa-bullseye me-1" aria-hidden="true"></i>Examples:</strong></p>
+                            <ul>
+                                <li>Complete your workout <em>before</em> watching your favorite TV show.</li>
+                                <li>Finish a challenging work report <em>before</em> scrolling through social media.</li>
+                                <li>Take a brief cold shower <em>before</em> enjoying your morning coffee.</li>
+                                <li>Tidy up your workspace <em>before</em> taking a relaxing break.</li>
+                                <li>Read a chapter of a dense book <em>before</em> playing a video game.</li>
+                            </ul>
+
+                            <p><strong><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Pitfalls:</strong></p>
+                             <ul>
+                                <li><strong>Avoid Extremes:</strong> The "pain" shouldn't be excessively draining, genuinely harmful, or unsustainable. It's about mindful effort or tolerable discomfort, not punishment or masochism.</li>
+                                <li><strong>Consistency Over Intensity:</strong> Small, consistent applications are often more effective than rare, heroic efforts.</li>
+                                <li><strong>Don't Delay Gratification Indefinitely:</strong> Ensure the reward reliably follows the effort relatively soon.</li>
+                            </ul>
+
+                            <p><strong><i class="fas fa-book-open me-1" aria-hidden="true"></i>Resources:</strong></p>
+                             <ul>
+                                <li>Research the "<strong>contrast principle</strong>" in psychology and decision-making.</li>
+                                <li>Explore concepts around "<strong>effort-reward pathways</strong>" in neuroscience.</li>
+                                <li>Consider Dr. Andrew Huberman's discussions on dopamine and effort.</li>
+                             </ul>
+
                             <div class="quiz mt-3">
                                 <h6>Quick Check:</h6>
                                 <p>True/False: This strategy aims to eliminate pleasure.</p>
                                 <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
-                                <p class="quiz-answer d-none mt-1"><strong>False.</strong> It aims to enhance the *value* of pleasure by preceding it with effort, strengthening reward pathways.</p>
+                                <p class="quiz-answer d-none mt-1"><strong>➡️ False.</strong> It aims to <em>enhance the perceived value</em> and satisfaction of pleasure by preceding it with effort, thereby strengthening the brain's reward pathways associated with work and accomplishment.</p>
+                            </div>
+
+                            <div class="user-notes mt-3">
+                                <h6>My Notes & Ideas:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="How can I apply this contrast principle today?"></textarea>
                             </div>
                         </div>
                     </div>
@@ -82,30 +114,50 @@
 
             <!-- Strategy 2: Dopamine Fast -->
             <div class="accordion-item strategy-item" data-strategy-id="strategy-2" data-triggers='["social", "food", "shopping", "gaming"]'>
-                <h2 class="accordion-header" id="headingTwo">
+                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                          <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 2 as active">
-                        2. <span class="highlight highlight-fast">Try a Dopamine Fast</span>
-                        <i class="fas fa-stopwatch ms-auto me-2 strategy-icon"></i>
+                        2. <span class="highlight highlight-fast">Try a Dopamine Fast</span> (Resetting Sensitivity)
+                        <i class="fas fa-stopwatch ms-auto me-2 strategy-icon" aria-hidden="true"></i>
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#dopamineStrategiesAccordion">
                      <div class="accordion-body">
-                        <p><strong>Concept:</strong> Take a planned break (e.g., hours, a day, longer) from specific high-reward stimuli (social media, sugar, shopping, etc.).</p>
+                        <p><strong>Concept:</strong> Take a planned, temporary break (ranging from hours to days or longer) from specific, highly stimulating, high-dopamine activities that you feel might be causing desensitization or dependency.</p>
                          <div class="learn-more-content">
-                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Constant high-dopamine hits desensitize receptors. A break allows them to reset, making normal activities feel more rewarding again. It reduces dependency on intense stimuli.</p>
-                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> No social media on Sundays, no sugary snacks for a week, designated "no-buy" periods.</p>
-                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> It's not about total sensory deprivation or eliminating *all* dopamine. Focus on reducing *problematic*, high-intensity behaviors. Start small.</p>
-                             <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Look up Dr. Anna Lembke's work on dopamine and addiction.</p>
-                             <div class="user-notes mt-3">
-                                <h6>My Notes:</h6>
-                                <textarea class="form-control notes-textarea" rows="2" placeholder="What specific activity could I fast from, and for how long?"></textarea>
-                            </div>
-                            <div class="quiz mt-3">
+                            <p><strong><i class="fas fa-brain me-1" aria-hidden="true"></i>Why it works:</strong> Constant exposure to intense dopamine spikes (from sources like social media, sugary foods, gaming, shopping, etc.) can lead to <strong>receptor downregulation</strong> – your brain reduces the number or sensitivity of dopamine receptors to protect itself from overstimulation. This makes it harder to feel pleasure or motivation from everyday activities. A "fast" or break allows these receptors time to <strong>reset and recover</strong>, restoring sensitivity and reducing cravings for intense stimuli. Normal, healthy activities start feeling more rewarding again.</p>
+
+                            <p><strong><i class="fas fa-bullseye me-1" aria-hidden="true"></i>Examples:</strong></p>
+                            <ul>
+                                <li><strong>Digital Detox:</strong> No social media access on Sundays. Turn off phone notifications for a full day.</li>
+                                <li><strong>Sugar Break:</strong> Avoid added sugars and highly processed snacks for a week.</li>
+                                <li><strong>Spending Freeze:</strong> Implement designated "no-buy" periods (e.g., for clothing, electronics) for a month.</li>
+                                <li><strong>Media Fast:</strong> Avoid streaming services or news websites for a weekend.</li>
+                            </ul>
+
+                            <p><strong><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Pitfalls:</strong></p>
+                            <ul>
+                                <li><strong>Not Total Deprivation:</strong> This isn't about eliminating *all* sources of dopamine or sensory input, which is unhealthy and unrealistic. Focus on reducing or eliminating *specific problematic*, high-intensity behaviors that you personally struggle with.</li>
+                                <li><strong>Start Small:</strong> Don't try to cut everything at once. Choose one or two areas and a manageable timeframe.</li>
+                                <li><strong>Relapse is Possible:</strong> If you slip up, don't see it as total failure. Acknowledge it and get back on track. For true addiction, professional help is crucial.</li>
+                            </ul>
+
+                             <p><strong><i class="fas fa-book-open me-1" aria-hidden="true"></i>Resources:</strong></p>
+                             <ul>
+                                <li>Look up Dr. Anna Lembke's work, particularly her book "<strong>Dopamine Nation,</strong>" which explores addiction and dopamine balance.</li>
+                                <li>Search for "dopamine detox" or "dopamine fasting," but critically evaluate sources – focus on targeted breaks, not extreme deprivation.</li>
+                             </ul>
+
+                             <div class="quiz mt-3">
                                 <h6>Quick Check:</h6>
-                                <p>The goal of a dopamine fast is to:</p>
+                                <p>The primary goal of a dopamine fast is to:</p>
                                 <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
-                                <p class="quiz-answer d-none mt-1"><strong>Reset sensitivity.</strong> It allows dopamine receptors to recover from overstimulation.</p>
+                                <p class="quiz-answer d-none mt-1"><strong>➡️ Reset sensitivity.</strong> It allows dopamine receptors time to recover from overstimulation, making everyday activities feel more rewarding and reducing dependency on high-intensity stimuli.</p>
+                            </div>
+
+                            <div class="user-notes mt-3">
+                                <h6>My Notes & Ideas:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="What specific activity could I fast from, and for how long?"></textarea>
                             </div>
                         </div>
                     </div>
@@ -117,27 +169,46 @@
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 3 as active">
-                        3. <span class="highlight highlight-rewards">Avoid Variable Rewards</span>
-                        <i class="fas fa-random ms-auto me-2 strategy-icon"></i>
+                        3. <span class="highlight highlight-rewards">Avoid Unpredictable Variable Rewards</span> (Taming the Hook)
+                        <i class="fas fa-dice-d6 ms-auto me-2 strategy-icon" aria-hidden="true"></i> <!-- Changed icon to dice -->
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#dopamineStrategiesAccordion">
                     <div class="accordion-body">
-                         <p><strong>Concept:</strong> Steer clear of activities with unpredictable payoffs that hijack your dopamine system (e.g., endless scrolling, notifications, gambling).</p>
+                         <p><strong>Concept:</strong> Consciously limit exposure to activities where the timing or size of the reward is unpredictable, as these are particularly potent at hijacking the dopamine system and fostering compulsive behavior.</p>
                         <div class="learn-more-content">
-                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Unpredictability is highly engaging for the brain's reward system (think slot machines). It keeps you hooked, seeking the *possibility* of a reward, often leading to compulsive behavior.</p>
-                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Turn off non-essential notifications, set specific times for checking feeds (don't scroll infinitely), avoid games with loot boxes.</p>
-                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Variable rewards are everywhere. Focus on reducing exposure to the most problematic ones for *you*. Complete avoidance might be unrealistic.</p>
-                             <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Read about "intermittent reinforcement" schedules.</p>
-                             <div class="user-notes mt-3">
-                                <h6>My Notes:</h6>
-                                <textarea class="form-control notes-textarea" rows="2" placeholder="Which variable rewards hook me the most? How can I limit them?"></textarea>
-                            </div>
+                            <p><strong><i class="fas fa-brain me-1" aria-hidden="true"></i>Why it works:</strong> The dopamine system is highly responsive to <strong>unpredictability</strong>. When a reward *might* come, but you don't know when or how big it will be (like pulling a slot machine lever), dopamine levels surge in *anticipation*. This uncertainty keeps you hooked, compelling you to repeat the behavior (scrolling, checking, playing) far longer than you intended, seeking that *possibility* of a reward. This pattern rapidly depleles your baseline dopamine and makes it hard to disengage.</p>
+
+                            <p><strong><i class="fas fa-bullseye me-1" aria-hidden="true"></i>Examples:</strong></p>
+                            <ul>
+                                <li><strong>Notifications:</strong> Turn off non-essential push notifications on your phone and computer.</li>
+                                <li><strong>Infinite Scroll Feeds:</strong> Set specific times and durations for checking social media or news feeds, rather than scrolling endlessly. Use app timers.</li>
+                                <li><strong>Gambling & Loot Boxes:</strong> Avoid activities with clear gambling mechanics or "loot boxes" in video games where outcomes are randomized.</li>
+                                <li><strong>Constant Checking:</strong> Resist the urge to constantly check email, stock prices, or social media likes/comments. Schedule check-in times.</li>
+                            </ul>
+
+                            <p><strong><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Pitfalls:</strong></p>
+                            <ul>
+                                <li><strong>Ubiquity:</strong> Variable rewards are embedded in many aspects of modern life (even social interactions). Complete avoidance is often unrealistic. Focus on identifying and reducing exposure to the *most* problematic and time-consuming ones *for you*.</li>
+                                <li><strong>Substitution:</strong> Be mindful not to simply replace one variable reward behavior with another.</li>
+                            </ul>
+
+                             <p><strong><i class="fas fa-book-open me-1" aria-hidden="true"></i>Resources:</strong></p>
+                             <ul>
+                                 <li>Read about "<strong>intermittent reinforcement schedules</strong>" (pioneered by B.F. Skinner) in behavioral psychology – this is the mechanism variable rewards exploit.</li>
+                                 <li>Explore discussions on the "<strong>attention economy</strong>" and how apps are designed to maximize engagement using these principles.</li>
+                             </ul>
+
                              <div class="quiz mt-3">
                                 <h6>Quick Check:</h6>
                                 <p>Variable rewards are less addictive than predictable rewards. True/False?</p>
                                 <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
-                                <p class="quiz-answer d-none mt-1"><strong>False.</strong> The unpredictability makes them *more* addictive and harder to disengage from.</p>
+                                <p class="quiz-answer d-none mt-1"><strong>➡️ False.</strong> The inherent unpredictability makes variable rewards significantly *more* addictive and harder to disengage from, as the brain becomes hooked on the anticipation of a potential reward.</p>
+                            </div>
+
+                             <div class="user-notes mt-3">
+                                <h6>My Notes & Ideas:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="Which variable rewards hook me? How can I limit exposure?"></textarea>
                             </div>
                         </div>
                     </div>
@@ -149,27 +220,49 @@
                 <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 4 as active">
-                        4. <span class="highlight highlight-stable">Choose Stable Pleasures</span>
-                        <i class="fas fa-leaf ms-auto me-2 strategy-icon"></i>
+                        4. <span class="highlight highlight-stable">Choose Stable Pleasures</span> (Cultivating Sustainable Satisfaction)
+                        <i class="fas fa-seedling ms-auto me-2 strategy-icon" aria-hidden="true"></i> <!-- Changed icon to seedling -->
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#dopamineStrategiesAccordion">
                      <div class="accordion-body">
-                        <p><strong>Concept:</strong> Focus on activities with predictable, steady rewards and intrinsic value (hobbies, learning, connection) rather than chasing intense highs.</p>
+                        <p><strong>Concept:</strong> Prioritize and invest time in activities that provide predictable, steady rewards and foster intrinsic satisfaction, connection, or skill development, rather than constantly chasing intense, fleeting dopamine highs.</p>
                        <div class="learn-more-content">
-                           <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> These activities provide sustainable satisfaction and build long-term well-being without the dopamine crashes associated with intense, fleeting pleasures. They often involve effort but yield lasting fulfillment.</p>
-                           <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Engaging in creative hobbies (art, music), learning a skill, deep conversations, reading, spending time in nature, meaningful work.</p>
-                           <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> These might not feel as immediately exciting as high-dopamine activities. Requires patience and valuing the process, not just the outcome.</p>
-                            <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Explore concepts like "flow state" (Mihaly Csikszentmihalyi) and "intrinsic motivation".</p>
-                            <div class="user-notes mt-3">
-                                <h6>My Notes:</h6>
-                                <textarea class="form-control notes-textarea" rows="2" placeholder="What stable, fulfilling activities could I engage in more?"></textarea>
-                            </div>
+                           <p><strong><i class="fas fa-brain me-1" aria-hidden="true"></i>Why it works:</strong> Unlike the spike-and-crash cycle of high-intensity, novel stimuli, stable pleasures provide a more <strong>sustainable</strong> form of satisfaction. These activities often require effort and build value over time (learning a skill, nurturing a relationship, creating something). They contribute positively to your dopamine baseline and overall well-being without leading to desensitization or withdrawal. They are often linked to <strong>intrinsic motivation</strong> – doing something for its own sake.</p>
+
+                           <p><strong><i class="fas fa-bullseye me-1" aria-hidden="true"></i>Examples:</strong></p>
+                           <ul>
+                                <li><strong>Hobbies:</strong> Engaging deeply in creative pursuits (art, music, writing), crafts, gardening, or model building.</li>
+                                <li><strong>Learning:</strong> Dedicating time to learning a new language, instrument, or complex skill.</li>
+                                <li><strong>Connection:</strong> Spending quality, focused time with loved ones, engaging in deep conversations.</li>
+                                <li><strong>Nature:</strong> Spending time outdoors, hiking, or simply appreciating the natural world.</li>
+                                <li><strong>Meaningful Work/Volunteering:</strong> Engaging in tasks that feel purposeful and contribute to something larger than oneself.</li>
+                                <li><strong>Exercise (Process-focused):</strong> Focusing on the feeling of movement and improvement rather than just the post-workout high.</li>
+                                <li><strong>Reading:</strong> Immersing oneself in a book.</li>
+                           </ul>
+
+                           <p><strong><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Pitfalls:</strong></p>
+                            <ul>
+                                <li><strong>Delayed Gratification:</strong> These activities might not feel as immediately thrilling as high-dopamine hits. Requires patience and valuing the process and long-term fulfillment over instant gratification.</li>
+                                <li><strong>Requires Effort:</strong> They often involve initial effort or overcoming inertia, linking back to the "Pain Before Pleasure" principle in a broader sense.</li>
+                            </ul>
+
+                            <p><strong><i class="fas fa-book-open me-1" aria-hidden="true"></i>Resources:</strong></p>
+                            <ul>
+                                <li>Explore concepts like "<strong>flow state</strong>" (Mihaly Csikszentmihalyi) – the feeling of complete absorption in an activity.</li>
+                                <li>Read about "<strong>intrinsic motivation</strong>" and <strong>Self-Determination Theory</strong> (Deci & Ryan), which emphasizes autonomy, competence, and relatedness.</li>
+                            </ul>
+
                             <div class="quiz mt-3">
                                 <h6>Quick Check:</h6>
                                 <p>Stable pleasures typically provide:</p>
                                 <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
-                                <p class="quiz-answer d-none mt-1"><strong>Sustainable satisfaction.</strong> They offer steady, long-term rewards rather than intense, short-lived highs.</p>
+                                <p class="quiz-answer d-none mt-1"><strong>➡️ Sustainable satisfaction.</strong> They offer steady, often long-term rewards derived from effort, connection, or skill-building, contributing to well-being without the drastic crashes of intense highs.</p>
+                            </div>
+
+                            <div class="user-notes mt-3">
+                                <h6>My Notes & Ideas:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="What stable, fulfilling activities could I engage in more?"></textarea>
                             </div>
                         </div>
                     </div>
@@ -181,27 +274,48 @@
                 <h2 class="accordion-header" id="headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                        <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 5 as active">
-                        5. <span class="highlight highlight-friction">Build Friction into Bad Habits</span>
-                         <i class="fas fa-anchor ms-auto me-2 strategy-icon"></i>
+                        5. <span class="highlight highlight-friction">Build Friction into Bad Habits</span> (Making Undesired Actions Harder)
+                         <i class="fas fa-anchor ms-auto me-2 strategy-icon" aria-hidden="true"></i>
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#dopamineStrategiesAccordion">
                     <div class="accordion-body">
-                        <p><strong>Concept:</strong> Make addictive or unwanted behaviors harder to access or initiate.</p>
+                        <p><strong>Concept:</strong> Intentionally make addictive, unwanted, or overly stimulating behaviors more difficult to access or initiate, creating a barrier that requires conscious effort to overcome.</p>
                         <div class="learn-more-content">
-                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Increasing the effort required interrupts automaticity. The pause created by the friction allows your conscious brain to intervene and make a different choice.</p>
-                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Delete distracting apps, keep junk food out of the house, put the phone in another room while working, use website blockers, log out of accounts.</p>
-                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Don't make *essential* tasks harder. Be realistic – if the friction is too high, you might just give up on the strategy altogether.</p>
-                             <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> James Clear's "Atomic Habits" discusses making bad habits difficult.</p>
-                             <div class="user-notes mt-3">
-                                <h6>My Notes:</h6>
-                                <textarea class="form-control notes-textarea" rows="2" placeholder="How can I add friction to one specific unwanted habit?"></textarea>
-                            </div>
-                            <div class="quiz mt-3">
+                            <p><strong><i class="fas fa-brain me-1" aria-hidden="true"></i>Why it works:</strong> Many undesirable habits (like mindless scrolling or snacking) operate on autopilot (System 1 thinking). Increasing the <strong>effort</strong> required to start the behavior – adding <strong>friction</strong> – interrupts this automaticity. The pause created by the friction gives your conscious brain (System 2 thinking) a chance to intervene, evaluate the urge, and potentially make a different, more deliberate choice.</p>
+
+                            <p><strong><i class="fas fa-bullseye me-1" aria-hidden="true"></i>Examples:</strong></p>
+                            <ul>
+                                <li><strong>App Management:</strong> Delete distracting apps from your phone (or move them off the home screen into folders).</li>
+                                <li><strong>Food Environment:</strong> Keep junk food out of the house entirely. Store healthy snacks in visible, easily accessible places.</li>
+                                <li><strong>Device Placement:</strong> Put your phone in another room while working, studying, or sleeping.</li>
+                                <li><strong>Digital Barriers:</strong> Use website blockers (like Freedom, Cold Turkey) or app timers. Log out of accounts after each session. Set complex, unique passwords for distracting sites (and don't save them in your browser).</li>
+                                <li><strong>Financial Friction:</strong> Leave credit cards at home when going shopping if prone to impulse buys. Unsubscribe from marketing emails.</li>
+                            </ul>
+
+                            <p><strong><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Pitfalls:</strong></p>
+                             <ul>
+                                <li><strong>Don't Impede Essentials:</strong> Be careful not to make genuinely *necessary* tasks harder (e.g., accessing work tools). Target the problematic behaviors specifically.</li>
+                                <li><strong>Overly High Friction:</strong> If the barrier is *too* difficult or annoying, you might abandon the strategy altogether. Find a sustainable level of friction. Be realistic.</li>
+                                <li><strong>Requires Upfront Effort:</strong> Setting up friction takes initial planning and action.</li>
+                            </ul>
+
+                             <p><strong><i class="fas fa-book-open me-1" aria-hidden="true"></i>Resources:</strong></p>
+                             <ul>
+                                <li>James Clear's "<strong>Atomic Habits</strong>" extensively discusses the principle of "Make It Difficult" for breaking bad habits.</li>
+                                <li>Explore the concept of "<strong>choice architecture</strong>" and how environmental design influences decisions.</li>
+                             </ul>
+
+                             <div class="quiz mt-3">
                                 <h6>Quick Check:</h6>
-                                <p>Adding friction works by making a habit:</p>
+                                <p>Adding friction works primarily by making a habitual behavior:</p>
                                 <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
-                                <p class="quiz-answer d-none mt-1"><strong>More effortful.</strong> This creates a pause for conscious decision-making.</p>
+                                <p class="quiz-answer d-none mt-1"><strong>➡️ More effortful.</strong> This effort requirement interrupts automaticity and creates a crucial pause, allowing for conscious decision-making rather than impulsive action.</p>
+                            </div>
+
+                            <div class="user-notes mt-3">
+                                <h6>My Notes & Ideas:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="How can I add friction to one specific unwanted habit?"></textarea>
                             </div>
                         </div>
                     </div>
@@ -213,27 +327,48 @@
                 <h2 class="accordion-header" id="headingSix">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                        <input type="checkbox" class="form-check-input strategy-checkbox me-3" aria-label="Mark strategy 6 as active">
-                        6. <span class="highlight highlight-challenges">Create Daily Micro-Challenges</span>
-                        <i class="fas fa-mountain ms-auto me-2 strategy-icon"></i>
+                        6. <span class="highlight highlight-challenges">Create Daily Micro-Challenges</span> (Building Resilience & Sensitivity)
+                        <i class="fas fa-mountain ms-auto me-2 strategy-icon" aria-hidden="true"></i>
                     </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#dopamineStrategiesAccordion">
                     <div class="accordion-body">
-                        <p><strong>Concept:</strong> Intentionally seek small, manageable doses of healthy discomfort or effort throughout the day.</p>
+                        <p><strong>Concept:</strong> Intentionally seek out and engage in small, manageable doses of healthy discomfort, effort, or focused attention throughout your day, rather than always opting for the easiest path.</p>
                          <div class="learn-more-content">
-                            <p><strong><i class="fas fa-brain me-1"></i>Why it works:</strong> Similar to "Pain Before Pleasure" but integrated daily. Regularly choosing slight effort over ease helps maintain dopamine sensitivity and builds resilience. It reinforces your ability to overcome resistance.</p>
-                            <p><strong><i class="fas fa-bullseye me-1"></i>Examples:</strong> Take the stairs, do a few push-ups during a break, tackle the hardest task first ("eat the frog"), resist checking phone immediately upon waking.</p>
-                            <p><strong><i class="fas fa-exclamation-triangle me-1"></i>Pitfalls:</strong> Keep them "micro" – they should be easily achievable daily boosts, not major ordeals that lead to burnout.</p>
-                            <p><strong><i class="fas fa-book-open me-1"></i>Resources:</strong> Look into "hormesis" – the concept of beneficial effects from low doses of stressors.</p>
-                             <div class="user-notes mt-3">
-                                <h6>My Notes:</h6>
-                                <textarea class="form-control notes-textarea" rows="2" placeholder="What's one small, effortful thing I can do today?"></textarea>
-                            </div>
-                            <div class="quiz mt-3">
+                            <p><strong><i class="fas fa-brain me-1" aria-hidden="true"></i>Why it works:</strong> This strategy is like a daily, low-dose version of "Pain Before Pleasure" integrated into your routine. Regularly choosing slight, manageable effort over immediate ease helps <strong>maintain dopamine sensitivity</strong> and <strong>builds resilience</strong> and self-efficacy. It reinforces your ability to overcome resistance and delay gratification on a small scale, strengthening those mental muscles. It taps into the principle of <strong>hormesis</strong>, where small, controlled stressors can strengthen the system.</p>
+
+                            <p><strong><i class="fas fa-bullseye me-1" aria-hidden="true"></i>Examples:</strong></p>
+                            <ul>
+                                <li><strong>Movement:</strong> Take the stairs instead of the elevator. Do a few push-ups or squats during a work break. Park slightly further away from your destination.</li>
+                                <li><strong>Focus:</strong> Tackle the most challenging task first thing in the morning ("eat the frog"). Set a timer for 25 minutes of focused work without checking your phone.</li>
+                                <li><strong>Discomfort:</strong> Briefly endure feeling slightly cold before putting on a jacket. Resist checking your phone immediately upon waking up – wait 15-30 minutes.</li>
+                                <li><strong>Mindfulness:</strong> Practice resisting an immediate craving (e.g., for a snack) for a few minutes, observing the feeling without acting.</li>
+                            </ul>
+
+                            <p><strong><i class="fas fa-exclamation-triangle me-1" aria-hidden="true"></i>Pitfalls:</strong></p>
+                             <ul>
+                                <li><strong>Keep it "Micro":</strong> These should be easily achievable daily boosts, not major ordeals that lead to decision fatigue or burnout. The goal is consistency, not heroism.</li>
+                                <li><strong>Not Punishment:</strong> Frame it as a positive choice for self-improvement, not self-flagellation.</li>
+                                <li><strong>Listen to Your Body:</strong> Don't push through genuine pain or exhaustion.</li>
+                             </ul>
+
+                            <p><strong><i class="fas fa-book-open me-1" aria-hidden="true"></i>Resources:</strong></p>
+                            <ul>
+                                <li>Look into "<strong>hormesis</strong>" – the biological principle where low doses of a stressor can be beneficial.</li>
+                                <li>Explore Carol Dweck's work on "<strong>growth mindset,</strong>" emphasizing the value of effort and challenge.</li>
+                                <li>Consider the "Eat the Frog" productivity technique (popularized by Brian Tracy).</li>
+                            </ul>
+
+                             <div class="quiz mt-3">
                                 <h6>Quick Check:</h6>
                                 <p>Micro-challenges should feel overwhelming. True/False?</p>
                                 <button class="btn btn-sm btn-outline-secondary quiz-toggle">Show Answer</button>
-                                <p class="quiz-answer d-none mt-1"><strong>False.</strong> They should be small, manageable doses of effort or discomfort.</p>
+                                <p class="quiz-answer d-none mt-1"><strong>➡️ False.</strong> They should be intentionally small and manageable doses of effort or discomfort that can be consistently integrated into daily life without causing significant stress or burnout.</p>
+                            </div>
+
+                            <div class="user-notes mt-3">
+                                <h6>My Notes & Ideas:</h6>
+                                <textarea class="form-control notes-textarea" rows="2" placeholder="What's one small, effortful thing I can choose today?"></textarea>
                             </div>
                         </div>
                     </div>
@@ -242,15 +377,35 @@
 
         </div> <!-- End Accordion -->
 
+        <!-- Integration & Conclusion Section -->
+        <section class="conclusion mt-5 p-4 bg-light rounded shadow-sm">
+            <h2 class="text-center mb-3">Putting It All Together: Finding Your Balance</h2>
+            <p>You now have a toolkit of six powerful strategies for managing your dopamine levels more consciously. Remember, the goal isn't perfection or implementing everything overnight. It's about <strong>awareness</strong> and <strong>intentionality</strong>.</p>
+
+            <h3 class="fs-5 fw-semibold mt-4">Start Small and Personalize:</h3>
+            <ul>
+                <li><strong>Self-Reflection:</strong> Begin by noticing your own patterns. Which high-dopamine activities tend to pull you in? When do you feel most unfocused or unmotivated? Where could adding friction or choosing stable pleasures make the biggest difference <em>for you</em>?</li>
+                <li><strong>Pick One or Two:</strong> Choose the strategy (or strategies) that resonates most with your current challenges and goals. Experiment with it for a week or two.</li>
+                <li><strong>Observe and Adjust:</strong> Pay attention to how you feel. Does adding effort before reward enhance satisfaction? Does a break from social media improve your focus? Does making a bad habit harder reduce its frequency? Adjust your approach based on your experience.</li>
+            </ul>
+
+            <h3 class="fs-5 fw-semibold mt-4">It's a Marathon, Not a Sprint:</h3>
+            <p>Building healthier dopamine habits is a continuous process, not a one-time fix. There will be days when it's harder than others. Be patient and compassionate with yourself. The aim is progress, not perfection.</p>
+            <p>By consciously engaging with these principles, you can gradually shift your brain's reward circuitry towards more sustainable sources of motivation and satisfaction. This leads not only to improved focus and productivity but also to greater resilience, deeper engagement with life, and a more stable sense of well-being.</p>
+            <p class="fw-bold text-center mt-4 conclusion-final">Take control of your dopamine, take control of your focus, and unlock a more balanced and fulfilling life.</p>
+        </section>
+
         <!-- Save Button -->
         <div class="text-center mt-5">
              <button class="btn btn-info btn-lg" onclick="window.print()">
-                <i class="fas fa-save me-2"></i>Save Summary (Print/PDF)
+                <i class="fas fa-save me-2" aria-hidden="true"></i>Save Summary (Print/PDF)
             </button>
         </div>
 
         <!-- Footer -->
-        <p class="text-center footer-note mt-4">Use this tool to build awareness and make mindful choices. Progress takes time!</p>
+        <footer class="text-center footer-note mt-4">
+            <p>Use this interactive guide to build awareness and make mindful choices. Progress takes time!</p>
+        </footer>
 
     </div> <!-- End Container -->
 
