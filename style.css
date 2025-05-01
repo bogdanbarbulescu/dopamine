@@ -1,45 +1,77 @@
 /* General Styles */
+:root {
+    --primary-blue: #0d6efd;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-text: #333;
+    --muted-text: #6c757d;
+    --highlight-yellow: #ffdd57;
+}
+
 body {
-    background-color: #f8f9fa;
+    background-color: var(--light-gray);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: var(--dark-text);
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 900px; /* Limit width for better readability */
+    max-width: 960px; /* Slightly wider for more content */
 }
 
-/* Header */
-.cheat-sheet-title {
-    background-color: #ffdd57;
-    padding: 10px 25px;
-    display: inline-block;
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-size: 2.2rem;
-    border-radius: 8px;
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Header/Title Area */
+.main-header {
+    background: linear-gradient(135deg, #e7f1ff, #d0e1ff); /* Light blue gradient */
+    border: 1px solid #c0d6f5;
+    box-shadow: 0 4px 10px rgba(0, 100, 250, 0.1);
+}
+.main-header h1 {
+    color: #0a58ca; /* Darker blue */
+}
+.main-header .lead {
+    color: #3b71ca; /* Medium blue */
+    font-weight: 400;
 }
 
-.intro-text {
-    color: #555;
+/* Introduction & Conclusion Sections */
+.introduction, .conclusion {
+    border: 1px solid #dee2e6;
+}
+.introduction strong, .conclusion strong {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+.conclusion h2 {
+    color: var(--primary-blue);
+}
+.conclusion h3 {
+    color: #495057; /* Slightly darker than default text */
+}
+.conclusion ul {
+    padding-left: 2rem; /* More indent for lists */
+}
+.conclusion ul li::marker {
+    color: var(--primary-blue); /* Style list bullets */
+}
+.conclusion-final {
     font-size: 1.1rem;
+    color: #0a58ca;
 }
+
 
 /* Trigger Tool */
 .trigger-tool {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    border-radius: .375rem; /* Match form-select radius */
+    border-radius: .375rem;
 }
 .trigger-tool .input-group-text {
-    background-color: #e9ecef;
+    background-color: var(--medium-gray);
     border-right: 0;
+    font-weight: 500;
 }
 .trigger-tool .form-select {
     border-left: 0;
 }
-
 
 /* Progress Bar */
 .progress-container p {
@@ -47,46 +79,50 @@ body {
     color: #495057;
 }
 .progress {
-    height: 25px;
-    font-size: 0.9rem;
+    height: 28px; /* Slightly taller */
+    font-size: 0.95rem;
     border-radius: 8px;
 }
 .progress-bar {
     font-weight: bold;
+    transition: width 0.6s ease; /* Smooth transition */
 }
 
 /* Accordion Styling */
 .accordion-item {
-    margin-bottom: 15px;
+    margin-bottom: 18px; /* More spacing */
     border: 1px solid #dee2e6;
     border-radius: 8px;
-    overflow: hidden; /* Ensures border radius applies correctly */
-    transition: box-shadow 0.3s ease, opacity 0.5s ease; /* Added opacity transition */
-    opacity: 1; /* Default opacity */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, opacity 0.5s ease;
+    opacity: 1;
 }
 
 .accordion-button {
     font-weight: 600;
-    font-size: 1.1rem;
-    color: #333;
-    background-color: #fff; /* Clearer header background */
-    align-items: center; /* Vertically align items */
+    font-size: 1.15rem; /* Slightly larger */
+    color: var(--dark-text);
+    background-color: #fff;
+    align-items: center;
+    padding: 1rem 1.25rem; /* Adjust padding */
 }
-
 .accordion-button:not(.collapsed) {
-    color: #0c63e4; /* Bootstrap's default active color */
+    color: var(--primary-blue);
     background-color: #e7f1ff;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
 }
-
 .accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25); /* Standard focus ring */
-    z-index: 3; /* Ensure focus is visible */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+    z-index: 3;
+}
+.accordion-button .highlight { /* Ensure highlight appears above background */
+    position: relative;
+    z-index: 1;
 }
 
 .accordion-body {
     background-color: #fdfdff; /* Slightly off-white body */
-    padding: 1.5rem; /* More padding */
+    padding: 1.25rem 1.5rem; /* Consistent padding */
 }
 
 /* Strategy Highlighting */
@@ -95,7 +131,7 @@ body {
     border-radius: 5px;
     margin: 0 5px;
     font-weight: bold;
-    color: #333; /* Ensure text is readable */
+    color: #333;
 }
 .highlight-pain { background-color: #fecaca; }
 .highlight-fast { background-color: #fed7aa; }
@@ -106,128 +142,158 @@ body {
 
 /* Icons in Accordion Header */
 .strategy-icon {
-    color: #6c757d; /* Muted icon color */
+    color: var(--muted-text);
     font-size: 1.1rem;
     transition: color 0.2s ease;
 }
 .accordion-button:not(.collapsed) .strategy-icon {
-    color: #0c63e4; /* Match active button color */
+    color: var(--primary-blue);
 }
-
 
 /* Checkbox Styling */
 .strategy-checkbox {
     width: 1.3em;
     height: 1.3em;
     cursor: pointer;
-}
-/* Stop accordion toggling when clicking checkbox */
-.strategy-checkbox {
-    pointer-events: auto; /* Make checkbox clickable */
+    flex-shrink: 0; /* Prevent shrinking */
+    pointer-events: auto; /* Make clickable */
 }
 .accordion-button {
     position: relative; /* Needed for z-index */
 }
 
-
 /* Learn More Content Styling */
 .learn-more-content {
-    margin-top: 15px;
-    padding-top: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
     border-top: 1px solid #eee;
-    font-size: 0.95rem;
+    font-size: 0.98rem; /* Slightly larger text */
     color: #444;
 }
-.learn-more-content p {
-    margin-bottom: 0.8rem;
+.learn-more-content p,
+.learn-more-content ul {
+    margin-bottom: 1rem; /* Consistent spacing */
+}
+.learn-more-content ul {
+    padding-left: 1.5rem; /* Standard list indent */
+}
+.learn-more-content li {
+    margin-bottom: 0.5rem;
 }
 .learn-more-content i {
-    color: #0d6efd; /* Bootstrap primary blue */
-    width: 20px; /* Align icons */
+    color: var(--primary-blue);
+    width: 22px; /* Align icons */
     text-align: center;
+    margin-right: 4px; /* Space after icon */
 }
 .learn-more-content strong {
     color: #212529;
+    font-weight: 600; /* Emphasize keywords */
+}
+/* Specific strong styling within lists for Pitfalls/Resources */
+.learn-more-content ul strong {
+     font-weight: 600;
+     color: #495057;
 }
 
 /* User Notes */
+.user-notes {
+    margin-top: 1.5rem; /* More space before notes */
+}
 .user-notes h6 {
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     color: #333;
 }
 .notes-textarea {
-    font-size: 0.9rem;
-    background-color: #fff; /* Ensure contrast */
+    font-size: 0.95rem;
+    background-color: #fff;
+    border-color: #ced4da;
+}
+.notes-textarea:focus {
+     border-color: #86b7fe;
+     box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
 }
 
 /* Quiz Styling */
 .quiz {
     margin-top: 20px;
     padding: 15px;
-    background-color: #e9ecef; /* Light grey background for quiz */
+    background-color: var(--medium-gray);
     border-radius: 6px;
+    border: 1px solid #d6d8db;
 }
 .quiz h6 {
     font-weight: 600;
     margin-bottom: 10px;
+    color: #495057;
 }
 .quiz p {
     margin-bottom: 10px;
 }
 .quiz-answer {
     font-weight: 500;
-    color: #198754; /* Bootstrap success green */
+    color: #0f5132; /* Darker green */
     background-color: #d1e7dd;
-    padding: 5px 10px;
+    padding: 8px 12px; /* More padding */
     border-radius: 4px;
     border: 1px solid #a3cfbb;
 }
 
 /* Filter Highlighting */
 .strategy-item.filtered-out {
-    opacity: 0.3; /* Fade out non-matching items */
-    pointer-events: none; /* Disable interaction */
+    opacity: 0.3;
+    pointer-events: none;
 }
 .strategy-item.highlight-relevant {
-    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.5); /* Yellow glow for relevant */
-    z-index: 2; /* Bring highlighted items forward */
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.6); /* Brighter glow */
+    z-index: 2;
 }
 
 /* Footer */
 .footer-note {
     margin-top: 40px;
-    color: #6c757d;
+    color: var(--muted-text);
     font-size: 0.9rem;
 }
 
 /* Print Styles */
 @media print {
     body {
-        font-size: 10pt; /* Smaller font for print */
+        font-size: 10pt;
+        color: #000; /* Ensure black text */
+        background-color: #fff !important; /* Force white background */
     }
     .container {
-        max-width: 100%; /* Use full width */
+        max-width: 100%;
     }
-    .cheat-sheet-title, .trigger-tool, .progress-container, .footer-note, .btn-info, .quiz-toggle, .user-notes {
-        display: none; /* Hide non-essential elements */
+    .main-header, .introduction, .conclusion, .trigger-tool, .progress-container, .footer-note, .btn-info, .quiz-toggle, .user-notes {
+        display: none; /* Hide non-essential sections */
     }
     .accordion-button {
-        background-color: #fff !important; /* Ensure white background */
-        color: #000 !important; /* Ensure black text */
+        background-color: #fff !important;
+        color: #000 !important;
         border-bottom: 1px solid #ccc;
+        padding: 0.5rem 0.8rem; /* Reduce padding */
+        font-size: 1.1rem;
+    }
+     .accordion-button::after { /* Hide accordion arrow */
+        display: none;
     }
     .accordion-collapse {
-        display: block !important; /* Force show all content */
+        display: block !important;
         visibility: visible !important;
+        border-top: 1px solid #eee;
     }
      .accordion-item {
         border: 1px solid #ccc;
         margin-bottom: 10px;
-        page-break-inside: avoid; /* Try to keep items on one page */
+        page-break-inside: avoid;
+        border-radius: 0 !important; /* Remove radius for print */
     }
     .accordion-body {
-        padding: 0.5rem;
+        padding: 0.8rem;
+        background-color: #fff !important;
     }
     .learn-more-content {
         border-top: 1px dashed #ccc;
@@ -235,19 +301,37 @@ body {
         padding-top: 10px;
     }
      .highlight {
-        border: 1px solid #ccc; /* Add border instead of background */
+        border: 1px solid #999;
+        padding: 1px 4px;
         background-color: #fff !important;
         color: #000 !important;
+        font-weight: bold;
     }
-    .strategy-checkbox {
-        display: none; /* Hide checkboxes */
+    .strategy-checkbox, .strategy-icon {
+        display: none; /* Hide checkboxes and icons */
+    }
+    .quiz {
+        background-color: #eee !important;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        padding: 8px;
     }
      .quiz-answer { /* Show answers directly in print */
         display: block !important;
-        background-color: #eee !important;
+        background-color: transparent !important; /* Clear background */
         color: #000 !important;
         border: none;
-        padding: 2px 5px;
+        padding: 2px 0;
         margin-top: 5px;
+        font-weight: normal;
+    }
+    .quiz-answer strong {
+         font-weight: bold;
+    }
+    h6 { /* Reduce heading sizes for print */
+        font-size: 1rem;
+    }
+    ul {
+        padding-left: 1.2rem; /* Reduce list indent */
     }
 }
